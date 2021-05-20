@@ -1,12 +1,25 @@
 {
-  "name": "app-updater",
-  "version": "1.0.0",
+  "name": "@pcsmw/node-app-updater",
+  "version": "1.0.1",
   "description": "",
   "main": "out/index.js",
   "scripts": {
+    "prepack": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mamphis/node-app-updater.git"
   },
   "keywords": [],
   "author": "mamphis <“mattis.wacker@pcsmw.de”>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^15.3.1",
+    "@types/semver": "^7.3.6"
+  },
+  "dependencies": {
+    "semver": "^7.3.5",
+    "simple-git": "^2.39.0"
+  }
 }
