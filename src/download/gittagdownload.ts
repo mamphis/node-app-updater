@@ -6,10 +6,9 @@ export class GitTagDownload implements IDownload {
         const git = simpleGit()
         
         await git.fetch();
-        await git.stash();
+        await git.reset(['--hard', 'HEAD']);
         await git.checkout(`tags/${version}`, ['-B', 'runtime']);
         await git.pull('origin', `tags/${version}`);
-        await git.stash(['pop']);
 
         return version;
     }
